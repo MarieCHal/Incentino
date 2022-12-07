@@ -79,6 +79,16 @@ WORDPRESS:
 
     wp-config:
     https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php
+    https://fr.wordpress.org/support/article/editing-wp-config-php/
     some stuff can be removed from the code that we have now (redef of )
+    DB_NAME: the name of the database Wordpress
+    DB_USER: database username
+    DB_PASSWORD: database password
+    DB_HOST: database hostname 
+    DB_CHARSET: default value utf8 (unicode UTF-8 in english) language
+    DB_COLLATE: default value null (auto)
 
+    security key:
+    - not necessary if not included in config file wordpres generate them automatically
+        to secure the website
 

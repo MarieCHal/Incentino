@@ -1,11 +1,12 @@
 
-/** methode d authentification normale donc : set le password **/
+/** set the passowrd for root since authentification method is normal no
+password is set */
 SET PASSWORD FOR 'root'@'localhost' = PASSWORD('$MARIADB_ROOT_PWD');
 
-/** Creation du premier user, l'autre sera cree via le container wordpress */
+/**creating a new user */
 CREATE DATABASE $MARIADB_DB;
 CREATE USER '$MARIADB_USER'@'%' IDENTIFIED by '$MARIADB_PWD';
 GRANT ALL PRIVILEGES ON $MARIADB_DB.* TO $MARIADB_USER@'%';
 
-/** Il faut flush pour que le grant soit active */
+/** flush privileges updates the changes made */
 FLUSH PRIVILEGES;
