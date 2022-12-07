@@ -1,7 +1,0 @@
-DOCKERFILE:
-    FROM
-    RUN
-    COPY
-    WORKDIR
-    ENTRYPOINT
-
