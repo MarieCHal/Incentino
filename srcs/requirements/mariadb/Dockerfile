@@ -2,8 +2,6 @@ FROM	alpine:3.14
 
 RUN		apk update && apk upgrade --no-cache
 
-RUN		apk add sudo
-
 RUN		apk add --no-cache --quiet --update mariadb mysql-client
 
 COPY	./conf/create_db.sql /tmp/create_db.sql

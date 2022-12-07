@@ -74,5 +74,11 @@ MARIADB:
 
 WORDPRESS:
     Dockerfile:
-    - WORKDIR: 
+        - WORKDIR:
+        - php:  pen source scripting language
+
+    wp-config:
+    https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php
+    some stuff can be removed from the code that we have now (redef of )
+
 
