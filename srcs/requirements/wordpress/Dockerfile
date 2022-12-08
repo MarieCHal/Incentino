@@ -8,7 +8,7 @@ RUN		apk add --no-cache --quiet --update php7 php-phar \
 
 #install wget (needed to install wordpress)
 #install tar to extact wordpress from the tar file downloaded by wget
-RUN     apk add wget bash tar --no-cache
+RUN     apk add wget tar --no-cache
 
 #download .tar wordpress
 RUN      wget -P /var/www/ https://wordpress.org/latest.tar.gz

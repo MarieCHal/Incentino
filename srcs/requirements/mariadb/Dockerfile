@@ -16,7 +16,7 @@ COPY 	./conf/mariadb-server.cnf /etc/my.cnf.d/
 
 RUN 	chmod +x ./entrypoint.sh
 
-#create a database in specified directory and password not set for uers
+#initialize the MariaDB data dir. and creates the the system tables in mysql db
 RUN		mysql_install_db --datadir=/var/lib/mysql \
 			--auth-root-authentication-method=normal
 

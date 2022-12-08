@@ -2,7 +2,7 @@
 DOCKER CMD:
     - sudo docker-compose 
     - docker prune volume 
-    -
+    - mysql -h 127.0.0.1 -u user -p
 
 DOCKER_COMPOSE
 -> file that call the dockerfile of each container to create the images, 
@@ -64,6 +64,7 @@ MARIADB:
         - first see if a .setup is present like this do not recreate the database if the 
             it was already created
             if not created will execute create_db.sql
+        - mysqladmin: client for performing administrative operations.
         - mysql_safe: recomanded way to start mysql server on unix
                     tries to start an executable named mysql
                     -- option to overide the default executable in our case we spceify the 
